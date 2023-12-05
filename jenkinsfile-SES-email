@@ -1,7 +1,7 @@
 pipeline{
     agent any
     tools{
-        maven 'maven-3.8.4'
+        maven 'maven-3.9.6'
     }
     environment {
     registry = '137827796096.dkr.ecr.us-east-1.amazonaws.com/myrepo'
@@ -11,7 +11,7 @@ pipeline{
     stages{
         stage('checkout the code'){
             steps{
-                git url:'https://github.com/bcreddydevops/springboot-maven-course-micro-svc.git', branch: 'master'
+                git url:'https://github.com/Venkatrepository/springboot-maven-course-micro-svc.git', branch: 'master'
             }
         }
         stage('build the code'){
